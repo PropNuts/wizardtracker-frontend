@@ -56,7 +56,7 @@ $barColors: ('red', 'deep-orange', 'amber', 'green', 'blue', 'deep-purple');
   min-width: 1%;
   border-radius: 0 $border-radius-xs $border-radius-xs 0;
 
-  transition: width 0.066s linear;
+  transition: width 0.25s linear;
 }
 
 .RssiBarInnerFiltered {

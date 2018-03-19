@@ -4,6 +4,7 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const distPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
+  mode: 'development',
   entry: [
     'babel-polyfill',
     './src/js/index.jsx',
@@ -41,7 +42,12 @@ module.exports = {
         test: /\.pug$/,
         use: [
           'file-loader?name=[name].html',
-          'extract-loader',
+          {
+            loader: 'extract-loader',
+            options: {
+              publicPath: null
+            }
+          },
           'html-loader',
           {
             loader: 'pug-html-loader',
@@ -89,7 +95,7 @@ module.exports = {
     new FriendlyErrorsWebpackPlugin(),
   ],
 
-  devtool: 'inline-source-map',
+  devtool: 'eval-source-map',
   devServer: {
     host: '0.0.0.0',
     contentBase: distPath,

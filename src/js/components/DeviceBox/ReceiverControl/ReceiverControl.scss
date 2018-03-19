@@ -1,7 +1,5 @@
 @import '~scss/core.scss';
 
-$barColors: ('red', 'deep-orange', 'amber', 'green', 'blue', 'deep-purple');
-
 @mixin set-bar-height() {
   height: $spacing-lg;
   @include desktop {

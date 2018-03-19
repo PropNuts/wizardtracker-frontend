@@ -8,7 +8,13 @@ import {
   DEVICE_HIDE_SPINNER
 } from './actions'
 
-function device(state = { ports: [], rssi: [] }, action) {
+const deviceDefaultState = {
+  ports: [],
+  rssiRaw: [],
+  rssiFiltered: []
+}
+
+function device(state = deviceDefaultState, action) {
   switch (action.type) {
     case FETCH_STATUS_SUCCESS:
       return {

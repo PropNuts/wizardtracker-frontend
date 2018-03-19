@@ -21,10 +21,6 @@ export default class ContentBox extends React.Component {
   }
 
   render() {
-    const containerStyle = !this.state.hidden ?
-      styles.ContentBoxContentContainerVisible :
-      styles.ContentBoxContentContainerHidden;
-
     return (
       <div className={styles.ContentBox}>
         <div className={styles.ContentBoxHeader} onClick={this.onHeaderClick}>

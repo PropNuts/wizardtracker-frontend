@@ -11,7 +11,8 @@ import {
 const deviceDefaultState = {
   ports: [],
   rssiRaw: [],
-  rssiFiltered: []
+  rssiFiltered: [],
+  frequencies: []
 }
 
 function device(state = deviceDefaultState, action) {

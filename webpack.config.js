@@ -101,7 +101,7 @@ module.exports = {
     contentBase: distPath,
     proxy: {
       '/api': {
-        target: 'http://localhost:5000/',
+        target: 'http://localhost:5050/',
         pathRewrite: { '^/api': '' }
       }
     },
